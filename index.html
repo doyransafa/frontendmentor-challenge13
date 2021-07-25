@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="images/logo.svg" alt="splitter logo." class="logo">
+  </header>
+
+  <div class="container main-container">
+    <form action="">
+      <label for="bill" class="calc-title">Bill</label>
+      <input type="number" id="bill" name="bill" placeholder="0" min="0" step=".01" max="99999" required>
+      
+      <legend for="tip" class="calc-title">Select Tip %</legend>
+      <div class="tip-selection">
+        <input type="radio" id="tip-5" name="tip" value="5" checked>
+        <label class="percentages" for="tip-5">5%</label>
+        <input type="radio" id="tip-10" name="tip" value="10">
+        <label class="percentages" for="tip-10">10%</label>
+        <input type="radio" id="tip-15" name="tip" value="15">
+        <label class="percentages" for="tip-15">15%</label>
+        <input type="radio" id="tip-25" name="tip" value="25">
+        <label class="percentages" for="tip-25">25%</label>
+        <input type="radio" id="tip-50" name="tip" value="50">
+        <label class="percentages" for="tip-50">50%</label>
+        <input type="number" id="custom" name="tip" placeholder="Custom">
+        <label for="custom"></label>
+      </div>
+      
+      <label for="people" class="calc-title">Number of People</label>
+      <input type="number" id="people" name="people" placeholder="0" min="0" step="1" max="100" required>
+    </form>
+
+    <div class="tip-display">
+
+      <div class="tip-flex">
+        <div class="tip tip-amount">
+          <div class="text">
+            <h2 class="amount">Tip Amount</h2>
+            <p>&bsol; person</p>
+          </div>
+          <div class="number">
+            <h2 class="price tip-person">$0.00</h2>
+          </div>
+        </div>
+  
+        <div class="tip tip-total">
+          <div class="text">
+            <h2 class="total">Total Amount</h2>
+            <p>&bsol; person</p>
+          </div>
+          <div class="number">
+            <h2 class="price total-person">$0.00</h2>
+          </div>
+        </div>
+      </div>
+
+      <button class="reset-button">RESET</button>
+
+    </div>
+  </div>
+
+
+
+  <script src="app.js"></script>
+</body>
+</html>
